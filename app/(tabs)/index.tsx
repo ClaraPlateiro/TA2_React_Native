@@ -35,6 +35,7 @@ export default function HomeScreen() {
         <SafeAreaView>
           <FlatList
             data={images}
+            horizontal
             renderItem={({ item }) => (
               <View style={styles.itemContainer}>
                 <Image style={styles.image} source={item.source} />
@@ -59,10 +60,12 @@ const styles = StyleSheet.create({
   itemContainer: {
     marginBottom: 20,
     alignItems: "center",
+    marginTop: 170,
   },
   image: {
-    width: 200,
-    height: 200,
+    marginTop: 20,
+    width: 270,
+    height: 270,
     marginBottom: 10,
   },
   description: {
